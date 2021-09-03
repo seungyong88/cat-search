@@ -1,9 +1,27 @@
-console.log("app is running!");
+import SearchInput from "./components/SearchInput.js";
+import SearchResult from "./components/SearchResult.js";
 
 function App($app) {
   this.state = {}
 
+  const searchInput = new SearchInput({ 
+    $app,
+    onSearch: async value => {
+      console.log(value);
+    }
+  });
+
+  const searchResult = new SearchResult({
+    $app,
+    initialState: [],
+  })
+
+  this.setState = () => {
+
+  }
+
   const init = () => {
+  
   }
 
   init();
